@@ -1,26 +1,29 @@
-.inicio {
-    text-align: right;
-}
-
-.centrar {
+body {
     width: 50%;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px;
 }
 
-.cursiva {
+.encabezado {
+    text-align: right;
     font-style: oblique;
 }
 
-.titulo {
+#remitente {
+    font-weight: bold;
+    font-size: 33px;
+}
+
+#subtitulo {
+    font-weight: bold;
     font-size: 22px;
-    font-weight: bold;
 }
 
-.subtitulo {
-    font-size: 18px;
-    font-weight: bold;
+.lista {
+    list-style-position: inside;
 }
 
-.espacio {
-    text-indent: 2cm;
+#parrafo {
+    margin: auto 25px;
 }
