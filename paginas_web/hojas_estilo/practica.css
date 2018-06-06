@@ -112,12 +112,10 @@ body {
 }
 
 #icono {
-    float: left;
-    clear: both;
     text-align: center;
-    width: 75%;
-    padding: 25px;
-    top: 80%;
+    float: left;
+    width: 1500px;
+    top: 800px;
     display: scroll;
     position: fixed;
 }
