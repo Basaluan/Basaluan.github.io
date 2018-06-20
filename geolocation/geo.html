@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Geolocalizacion</title>
+
+    <link rel="stylesheet" href="geo.css" />
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?v3"></script>
+</head>
+
+<body>
+
+    <div id="titulo">
+        <h1>GEOLOCALIZACION</h1>
+        <h2>Mi ubicacion - Domicilio de "Luis Angel"</h2>
+    </div>
+
+    <div id="inicio">
+        <a href="/index.html">
+            <img id="inicio" width="100" height="100" src="/img/inicio.png">
+        </a>
+    </div>
+
+    <div id="mapa">MAPA</div>
+
+    <script type="text/javascript">
+        var ubicacion = document.getElementById("mapa");
+        navigator.geolocation.getCurrentPosition(localizar);
+
+        function localizar(respuesta) {
+
+            var latitud = respuesta.coords.latitude;
+            var longitud = respuesta.coords.longitude;
+            var mi_ubicacion = new google.maps.LatLng(latitud, longitud);
+            var objeto_mi_ubicacion = {
+                zoom: 10,
+                center: mi_ubicacion
+            }
+            var mi_ubicacion_mapa = new google.maps.Map(ubicacion, objeto_mi_ubicacion);
+            var objeto_marcador_ubicacion = {
+                position: mi_ubicacion,
+                map: mi_ubicacion_mapa,
+                title: "Mi posicion"
+            }
+            var marcador_ubicacion_mapa = new google.maps.Marker(objeto_marcador_ubicacion);
+            var destino = new google.maps.Geocoder();
+            var informacion_destino = {
+                address: "Nicolás Arriola 727, Cajamarca"
+            }
+            destino.geocode(informacion_destino, hallar_coordenadas);
+
+            function hallar_coordenadas(datos) {
+                var coordenadas = datos[0].geometry.location;
+                var objeto_marcador_destino = {
+                    map: mi_ubicacion_mapa,
+                    position: coordenadas,
+                    title: "Destino"
+                }
+                var marcador_destino_mapa = new google.maps.Marker(objeto_marcador_destino)
+            }
+            var inicio = {
+                map: mi_ubicacion_mapa,
+                suppressMarkers: true
+            }
+            var fin = {
+                origin: mi_ubicacion,
+                destination: 'Nicolás Arriola 727, Cajamarca',
+                travelMode: google.maps.TravelMode.DRIVING
+            }
+            var camino = new google.maps.DirectionsService();
+            var representar = new google.maps.DirectionsRenderer(inicio);
+            camino.route(fin, rutear);
+
+            function rutear(resultados, status) {
+                if (status == 'OK') {
+                    representar.setDirections(resultados)
+                } else {
+                    alert("¡RUTA NO CREADA! \n NOTA: La ruta que se crea es via terrestre \n\n Reducir el mapa para poder observar la ubicacion del estadio");
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>
