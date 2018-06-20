@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative|Clicker+Script|Montez|Montserrat+Subrayada|Rochester|Stalemate" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>DIVERSIDAD ANIMAL</title>
+    <style>
+        body {
+            line-height: 1.8;
+            color: #000000;
+            height: 100%;
+            margin: 0;
+        }
+        
+        h2 {
+            font-family: 'Montez', cursive;
+            font-size: 50px;
+        }
+        
+        p {
+            font-family: 'Clicker Script', cursive;
+            font-size: 20px;
+        }
+        
+        .ex2 {
+            max-width: 500px;
+            margin: auto;
+        }
+        
+        div.opacidad {
+            opacity: 0.6;
+            filter: alpha(opacity=60);
+            /* For IE8 and earlier */
+        }
+        
+        .grad1 {
+            height: 200px;
+            background: red;
+            font-family: 'Cinzel Decorative', cursive;
+            background: linear-gradient(to right, rgba(255, 0, 0, 0), rgb(191, 176, 245));
+        }
+        
+        .mySlides {
+            display: none
+        }
+        
+        img {
+            width: 100%;
+            height: auto;
+        }
+        
+        .sidenav {
+            padding-top: 60px;
+            height: 100%;
+            text-justify: centro;
+        }
+        
+        .centro {
+            padding-top: 40px;
+            padding-bottom: 40px;
+            border: 2px solid #2e2842;
+            border-style: solid;
+        }
+        
+        .row.content {
+            height: 450px;
+        }
+        
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+        
+        li {
+            float: left;
+        }
+        
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 10px 50px;
+            text-decoration: none;
+        }
+        
+        li a:hover:not(.active) {
+            background-color: #111;
+        }
+        
+        .active {
+            background-color: rgb(132, 102, 160);
+        }
+        
+        @media screen and (max-width: 767px) {
+            .sidenav {
+                height: auto;
+                padding: 25px;
+            }
+            .row.content {
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<header class=" w3-container w3-theme w3-padding grad1" id="myHeader">
+    <div class="w3-center">
+        <div class="w3-padding-32">
+            <div class="w3-padding-32">
+                <h1 class="w3-xxxlarge w3-animate-bottom" style="color:rgb(227, 225, 241)">DIVERSIDAD ANIMAL</h1>
+                </h1>
+            </div>
+        </div>
+    </div>
+</header>
+
+<body>
+
+    <div class="w3-top">
+        <div class="w3-row w3-padding w3-black opacidad" style="font-family: 'Montserrat Subrayada', sans-serif;">
+            <div class="w3-col s3">
+                <a href="#cajamarca" class="w3-button w3-block w3-black">CAJAMARCA</a>
+            </div>
+            <div class="w3-col s3 ">
+                <a href="#fauna" class="w3-button w3-block w3-black">FAUNA</a>
+            </div>
+            <div class="w3-col s3">
+                <a href="#habitat" class="w3-button w3-block w3-black">HABITAT</a>
+            </div>
+            <div class="w3-col s3">
+                <a href="#ubicación" class="w3-button w3-block w3-black">UBICACION</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid text-center">
+        <div class="row content">
+            <div class="col-sm-3 sidenav">
+                <div class=" w3-margin-bottom w3-card">
+                    <img src="img/conejo.jpg" alt="Conejo" style="width:100%" class="w3-hover-opacity">
+                    <div class="w3-container w3-white">
+                        <p><b>Conejo silvestre</b></p>
+                    </div>
+                </div>
+                <div class=" w3-margin-bottom w3-card">
+                    <img src="img/tigre.jpg" alt="Gato" style="width:100%" class="w3-hover-opacity">
+                    <div class="w3-container w3-white">
+                        <p><b>Gato salvaje</b></p>
+                    </div>
+                </div>
+                <div class=" w3-margin-bottom w3-card">
+                    <img src="img/vaca.JPG" alt="Vaca" style="width:100%" class="w3-hover-opacity">
+                    <div class="w3-container w3-white">
+                        <p><b>Vaca</b></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6  centro">
+                <h2 id="cajamarca">Cajamarca</h2>
+                <br>
+                <p class="text-justify">Situada en la región del noroccidental del Perú y comprende un complejo sistema de climas, geología y topografía. Esto posibilita la existencia de ecosistemas variados y diversidad de especies, genes y representaciones culturales, los
+                    cuales han evolucionado y desarrollado adaptándose a los espacios que ocupan.</p>
+                </p>
+                <img src="img/cajamarca.jpeg" alt="Cajamarca" style="width:60%">
+                <br>
+                <hr id="fauna">
+                <br>
+                <div class="container-fluid ">
+                    <h2>Fauna</h2>
+                    <br>
+                    <p class="text-justify">Cajamarca se caracteriza por la presencia de alpacas y vicuñas, pero también de venados, chinchilla y vizcachas. Las alturas andinas también es un territorio de los depredadores como el gavilán, halcón y cóndor. La cría de ganado vacuno
+                        tiene suma importancia, también desarrolla la cría de ganado ovino y de camélidos andinos. En la localidad de Namora se puede observar una importante estación, piscícola, que produce truchas y pejerreyes.</p>
+                </div>
+                <br>
+                <hr id="habitat">
+                <br>
+                <div class="container-fluid ex2">
+                    <h2>Habitat</h2>
+                    <img src="img/alice.jpg"></div>
+            </div>
+            <div class="col-sm-3 sidenav ">
+                <div class=" w3-margin-bottom w3-card">
+                    <img src="img/pichon.jpg" alt="Pichon" style="width:100%" class="w3-hover-opacity">
+                    <div class="w3-container w3-white">
+                        <p><b>Pichón</b></p>
+                    </div>
+                </div>
+                <div class=" w3-margin-bottom w3-card">
+                    <img src="img/halcon.jpg" alt="Halcon" style="width:100%" class="w3-hover-opacity">
+                    <div class="w3-container w3-white">
+                        <p><b>Halcón</b></p>
+                    </div>
+                </div>
+                <div class=" w3-margin-bottom w3-card">
+                    <img src="img/buho.jpg" alt="Buho" style="width:100%" class="w3-hover-opacity">
+                    <div class="w3-container w3-white">
+                        <p><b>Buho</b></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

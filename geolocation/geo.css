@@ -4,16 +4,6 @@ body {
     width: 99%;
 }
 
-#titulo {
-    width: 100%;
-    height: auto;
-    position: fixed;
-    background: #979EA3;
-    top: 0;
-    left: 0;
-    text-align: center;
-}
-
 #inicio {
     float: right;
     top: 2%;
@@ -24,7 +14,18 @@ body {
     position: fixed;
 }
 
-#mapa {
-    margin: 10% auto;
+#titulo {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    background: #979EA3;
+    top: 0;
+    left: 0;
     text-align: center;
+}
+
+#mapa {
+    margin: 7% auto;
+    width: 1000px;
+    height: 700px;
 }

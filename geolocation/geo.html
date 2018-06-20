@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html>
 
 <head>
     <meta charset="UTF-8">
@@ -24,59 +24,60 @@
         </a>
     </div>
 
-    <div id="mapa">MAPA</div>
-
+    <div id="mapa">Mapa</div>
     <script type="text/javascript">
-        var ubicacion = document.getElementById("mapa");
-        navigator.geolocation.getCurrentPosition(localizar);
+        var divMapa = document.getElementById('mapa');
+        navigator.geolocation.getCurrentPosition(fn_ok, fn_mal);
 
-        function localizar(respuesta) {
+        function fn_mal() {}
 
-            var latitud = respuesta.coords.latitude;
-            var longitud = respuesta.coords.longitude;
-            var mi_ubicacion = new google.maps.LatLng(latitud, longitud);
-            var objeto_mi_ubicacion = {
-                zoom: 10,
-                center: mi_ubicacion
+        function fn_ok(rpta) {
+            var lat = rpta.coords.latitude;
+            var lon = rpta.coords.longitude;
+            var gLatLon = new google.maps.LatLng(lat, lon);
+            var objConfig = {
+                zoom: 50,
+                center: gLatLon
             }
-            var mi_ubicacion_mapa = new google.maps.Map(ubicacion, objeto_mi_ubicacion);
-            var objeto_marcador_ubicacion = {
-                position: mi_ubicacion,
-                map: mi_ubicacion_mapa,
-                title: "Mi posicion"
+            var gMapa = new google.maps.Map(divMapa, objConfig);
+            var objConfigMarker = {
+                position: gLatLon,
+                map: gMapa,
+                title: "Su ubicacion"
             }
-            var marcador_ubicacion_mapa = new google.maps.Marker(objeto_marcador_ubicacion);
-            var destino = new google.maps.Geocoder();
-            var informacion_destino = {
-                address: "Nicolás Arriola 727, Cajamarca"
+            var gMarker = new google.maps.Marker(objConfigMarker);
+            var gCoder = new google.maps.Geocoder();
+            var objInformacion = {
+                address: 'Santa Victoria 195, Cajamarca'
             }
-            destino.geocode(informacion_destino, hallar_coordenadas);
+            gCoder.geocode(objInformacion, fn_coder);
 
-            function hallar_coordenadas(datos) {
+            function fn_coder(datos) {
                 var coordenadas = datos[0].geometry.location;
-                var objeto_marcador_destino = {
-                    map: mi_ubicacion_mapa,
+                var config = {
+                    map: gMapa,
                     position: coordenadas,
-                    title: "Destino"
+                    title: 'Domicilio Basaluan'
                 }
-                var marcador_destino_mapa = new google.maps.Marker(objeto_marcador_destino)
+                var gMarkerDV = new
+                google.maps.Marker(config)
             }
-            var inicio = {
-                map: mi_ubicacion_mapa,
+            var objConfigDR = {
+                map: gMapa,
                 suppressMarkers: true
             }
-            var fin = {
-                origin: mi_ubicacion,
-                destination: 'Nicolás Arriola 727, Cajamarca',
+            var objConfigDS = {
+                origin: gLatLon,
+                destination: 'Santa Victoria 195, Cajamarca',
                 travelMode: google.maps.TravelMode.DRIVING
             }
-            var camino = new google.maps.DirectionsService();
-            var representar = new google.maps.DirectionsRenderer(inicio);
-            camino.route(fin, rutear);
+            var ds = new google.maps.DirectionsService();
+            var dr = new google.maps.DirectionsRenderer(objConfigDR);
+            ds.route(objConfigDS, fnRutear);
 
-            function rutear(resultados, status) {
+            function fnRutear(resultados, status) {
                 if (status == 'OK') {
-                    representar.setDirections(resultados)
+                    dr.setDirections(resultados)
                 } else {
                     alert("¡RUTA NO CREADA! \n NOTA: La ruta que se crea es via terrestre \n\n Reducir el mapa para poder observar la ubicacion del estadio");
                 }

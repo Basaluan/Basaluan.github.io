@@ -1,0 +1,101 @@
+body {
+    line-height: 1.8;
+    color: #000000;
+    height: 100%;
+    margin: 0;
+}
+
+h2 {
+    font-family: 'Montez', cursive;
+    font-size: 50px;
+}
+
+p {
+    font-family: 'Clicker Script', cursive;
+    font-size: 20px;
+}
+
+.ex2 {
+    max-width: 500px;
+    margin: auto;
+}
+
+div.opacidad {
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+    /* For IE8 and earlier */
+}
+
+.grad1 {
+    height: 200px;
+    background: red;
+    font-family: 'Cinzel Decorative', cursive;
+    background: linear-gradient(to right, rgba(255, 0, 0, 0), rgb(191, 176, 245));
+}
+
+.mySlides {
+    display: none
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.sidenav {
+    padding-top: 60px;
+    height: 100%;
+    text-justify: centro;
+}
+
+.centro {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border: 2px solid #2e2842;
+    border-style: solid;
+}
+
+.row.content {
+    height: 450px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px 50px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: rgb(132, 102, 160);
+}
+
+@media screen and (max-width: 767px) {
+    .sidenav {
+        height: auto;
+        padding: 25px;
+    }
+    .row.content {
+        height: auto;
+    }
+}
