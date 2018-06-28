@@ -1,0 +1,142 @@
+body {
+    line-height: 1.8;
+    background: #1FE2F3;
+    height: 99%;
+    margin: 0;
+}
+
+#encabezado {
+    margin: 2% auto;
+    background-image: url("/src/img/cajamarca/fondo.jpg");
+    text-shadow: 0 0 20px #fefcc9, 2px -2px 3px #feec85, -4px -4px 5px #ffae34, 5px -10px 6px #ec760c, -5px -12px 8px #cd4606, 0 -15px 20px #973716, 2px -15px 20px #451b0e;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.grad1 {
+    height: 200px;
+    background: red;
+    font-family: 'Cinzel Decorative', cursive;
+    background: linear-gradient(to right, rgba(255, 0, 0, 0), rgb(191, 176, 245));
+}
+
+.w3-top {
+    background: #1974B6;
+}
+
+.opacidad {
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+    font-family: 'Montserrat Subrayada', sans-serif;
+}
+
+#inicio {
+    width: auto;
+    height: 30px;
+    text-align: center;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.sidenav {
+    padding-top: 60px;
+    height: 100%;
+    text-justify: centro;
+}
+
+#carrusel_imagenes {
+    box-shadow: 0px 0px 50px #18FC13;
+}
+
+#informacion {
+    margin: 15% auto;
+}
+
+#enlace {
+    width: 80%;
+    height: auto;
+    border: #1974B6 10px solid;
+    padding: 5px;
+    margin: auto;
+    display: block;
+}
+
+.centro {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border: 2px solid #2e2842;
+    border-style: solid;
+}
+
+#captura {
+    width: 40%;
+    height: auto;
+    padding: 3px;
+    display: inline-block;
+}
+
+#icono {
+    float: right;
+}
+
+#subtitulo {
+    margin: 50px auto;
+    background: #5AD527;
+    box-shadow: 20px 20px 20px #DED710;
+}
+
+.social {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#video {
+    width: 100%;
+    height: auto;
+}
+
+#texto {
+    padding: 1% 5%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.pie_pagina {
+    margin: 1% auto;
+    color: #DB1616;
+    clear: both;
+    text-align: center;
+    padding: 1%;
+    border-bottom: 2px solid #DB1616;
+    font-weight: bold;
+}
+
+h1 {
+    font: 200% sans-serif;
+    font-size: 100px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+p {
+    font-family: sans-serif;
+    font-size: 17px;
+}
