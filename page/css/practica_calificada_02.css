@@ -1,0 +1,171 @@
+html {
+    margin: 0% 10%;
+}
+
+body {
+    width: 100%;
+    height: auto;
+}
+
+.inicio {
+    width: 40%;
+    height: auto;
+    float: left;
+}
+
+.notas {
+    width: 30%;
+    height: auto;
+    display: inline-block;
+}
+
+.galeria {
+    width: 30%;
+    float: right;
+}
+
+#titulo {
+    width: 90%;
+    height: auto;
+    margin-left: 5%;
+    margin-right: 1%;
+}
+
+#recuadro {
+    width: auto;
+    height: auto;
+    float: left;
+    padding: 0px 5% 0px 5%;
+    margin-left: 5%;
+    margin-right: 1%;
+    background-color: #F01111;
+    color: antiquewhite;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#fecha {
+    width: auto;
+    height: auto;
+    margin-top: 8%;
+    margin-left: 5%;
+    margin-right: 1%;
+}
+
+#tiempo {
+    text-transform: uppercase;
+}
+
+#texto {
+    width: 90%;
+    height: auto;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 1%;
+}
+
+#color {
+    color: #F01111;
+}
+
+#redes {
+    float: right;
+    margin-left: 5%;
+    margin-right: 15%;
+}
+
+#imagen {
+    width: 80%;
+    height: auto;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#grande {
+    width: 100%;
+    height: auto;
+}
+
+#subtitulo {
+    border-bottom: 3px solid #F01111;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+#ver {
+    width: auto;
+    height: auto;
+    float: right;
+    padding: 0px 5% 0px 5%;
+    margin-left: 2%;
+    margin-right: 2%;
+    background-color: #EEEEEE;
+    text-align: right;
+    color: #F01111;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+h5 {
+    color: #F01111;
+}
+
+#noticia_reciente {
+    margin-top: 22%;
+    margin-bottom: 0%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+#noticia {
+    margin-top: 0%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+#enlace {
+    width: auto;
+    height: auto;
+    margin: 5%;
+    padding: 2% 1%;
+    margin-left: 1%;
+    margin-right: 5%;
+    border: 3px solid #272727;
+}
+
+figure {
+    width: 20%;
+    height: auto;
+    float: left;
+}
+
+#pequeña {
+    width: 100%;
+    height: auto;
+}
+
+#registro {
+    width: auto;
+    height: auto;
+    margin: 5%;
+    padding: 2% 1%;
+    margin-left: 1%;
+    margin-right: 5%;
+    border: 3px solid rgb(133, 14, 14);
+    background-color: rgb(133, 14, 14);
+    color: #EEEEEE;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#boton {
+    width: 100%;
+    height: 100%;
+    border: 0px;
+    background-color: #FFFFFF;
+    text-align: left;
+}
+
+#noticia_oculta {
+    visibility: hidden;
+}

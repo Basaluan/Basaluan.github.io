@@ -5,11 +5,130 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Practica Calificada 02</title>
+    <title>Practica Calificada 01</title>
+
+    <link rel="stylesheet" type="text/css" href="css/practica_calificada_02.css" />
+    <link rel="stylesheet" href="/ico/iconos/Font/demo-files/demo.css">
+    <link href="/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+    <script>
+        function cambiarNoticia() {
+            document.getElementById("titulo").innerHTML = "SE Analiza: live streams sobre la recuperacion economica y el impuslo del consumo privado";
+            document.getElementById("recuadro").innerHTML = "SE Analiza";
+            document.getElementById("tiempo").innerHTML = " 26 de junio de 2018";
+            document.getElementById("texto").innerHTML = noticia_oculta.innerHTML;
+            document.getElementById("grande").src = "/src/img/noticias/i2.PNG";
+        }
+    </script>
 </head>
 
 <body>
+    <div class="inicio">
+        <h1>
+            <p id="titulo"> Pizza Hut: la estrategia que se seguira tras su alianza con Telepizza </p>
+        </h1>
+        <h3>
+            <p id="recuadro"> Fast Food </p>
+        </h3>
+        <div id="fecha">
+            &nbsp; &nbsp; &nbsp;
+            <span class="icon icon-clock" id="tiempo"> Hace 3 horas </span>
+        </div>
+        <div id="texto">
+            <p> Tras su alianza con <span id="color">Telepizza, Pizza Hut</span> superara en numero de locales a KFC, hasta ahora la cadena de <b><i>fast food</i></b> con mas locales en el pais. Su foco estara en una mayor cobertura y precios accesibles.</p>
+        </div>
+        <div id="redes">
+            <div class="social-links">
+                <a href="https://www.facebook.com/" class="facebook"><i class="fa fa-facebook"></i></a>
+                <a href="https://twitter.com/" class="twitter"><i class="fa fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/m/login/" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                <a href="https://mail.google.com/mail/u/0/#inbox" class="google-plus"><i class="fa fa-google-plus"></i></a>
+            </div>
+        </div>
+        <div id="imagen">
+            <img id="grande" src="/src/img/noticias/i1.PNG" />
+        </div>
+    </div>
 
+    <div class="notas">
+        <div id="subtitulo">
+            <h2>Notas del Dia</h2>
+        </div>
+        <div id="ver">
+            <a href="http://www.noticias.com/">Ver Todas</a>
+        </div>
+        <div id="noticia_reciente">
+            <h5>HACE 2 HORAS</h5>
+            <h4>Intenet: MTC fijo que velocidad de banda ancha se de minimo 4 Mbps</h4>
+            <p>El ministerio informo que la dispocision sera obligatoria en seis meses.</p>
+            <br>
+        </div>
+        <div id="noticia">
+            <h5>HACE 3 HORAS</h5>
+            <h4>Bladimir Putin y donald Trump se reuniran el 16 de julio en Helsinki</h4>
+            <p>Se tocaran temas vinculados a Siria y al problema interno de Ucrania.</p>
+            <br>
+        </div>
+        <div id="noticia">
+            <h5>HACE 4 HORAS</h5>
+            <h4>MEF presento denuncia contra funcionarios acusados de pedir sobornos</h4>
+            <p>Mardonio Guillen, alcalde de San Juan Bautista (Ayacucho) denuncio los hechos junto al...</p>
+            <br>
+        </div>
+    </div>
+
+    <div class="galeria">
+        <div id="enlace">
+            <figure>
+                <img id="pequeña" src="/src/img/noticias/g1.PNG" />
+            </figure>
+            <div id="contenido">
+                <h4>Especial</h4>
+                <p>Mundial Rusia 2018</p>
+            </div>
+        </div>
+        <div id="enlace">
+            <figure>
+                <img id="pequeña" src="/src/img/noticias/g2.PNG" />
+            </figure>
+            <div id="contenido">
+                <h4>Especial</h4>
+                <p>La banca capta el calor del mercado</p>
+            </div>
+        </div>
+        <div id="enlace">
+            <button id="boton" onclick="cambiarNoticia()">
+                <figure>
+                    <img id="pequeña" src="/src/img/noticias/g3.PNG" />
+                </figure>
+                <div id="contenido">
+                    <h4>Especial</h4>
+                    <p>Desafios de innovacion</p>
+                </div>
+            </button>
+        </div>
+        <div id="enlace">
+            <figure>
+                <img id="pequeña" src="/src/img/noticias/g4.PNG" />
+            </figure>
+            <div id="contenido">
+                <h4>Especial</h4>
+                <p>Elecciones 2018</p>
+            </div>
+        </div>
+        <div id="registro">
+            <figure>
+                <img id="pequeña" src="/src/img/noticias/g5.PNG" />
+            </figure>
+            <div id="cuadro">
+                <p>Registrate a nuestro boletin de noticias</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="noticia_oculta">
+        <p> En esta edicion del <b>Facebook</b> <i>live stream</i> <span id="color">SE Analiza</span> , se comenta la recuperacion de la economia peruan, su impacto en el consumo privado, y la reconfiguracion de los mercados de comida para mascotas y <i>fast food</i>            .</p>
+    </div>
 </body>
 
 </html>
